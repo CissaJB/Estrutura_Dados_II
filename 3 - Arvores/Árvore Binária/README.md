@@ -1,4 +1,4 @@
-# 1° Exercício sobre Árvore Binária. 22/08
+# Exercício1 sobre Árvore Binária. 22/08
 
 Crie em C a estrutura de uma árvore binária cuja informação seja um inteiro.
 
