@@ -12,5 +12,5 @@ Dentro do diretório principal, as atividades estão organizadas por conteúdo e
 ### Exemplo de Organização
 
 - **Pasta Principal:** `3 - Árvores`
-- **Subpasta de Tema:** `ÁrvoreBinaria`
-- **Subpasta de Exercício:** `Exercício1`
+- **Subpasta de Conteúdo:** `ÁrvoreBinaria`
+- **Exercício:** `Exercício1`
