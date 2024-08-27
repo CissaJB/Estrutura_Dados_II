@@ -11,18 +11,18 @@ typedef struct NO* ArvBin;
 
 // Função para inserir um valor na árvore
 ArvBin inserir_valor(ArvBin raiz, int num) {
-    // Se a árvore estiver vazia, 1° Nó
+    // Se a árvore estiver vazia, cria o 1° Nó
     if (raiz == NULL) {
         ArvBin novo = (ArvBin)malloc(sizeof(struct NO));
         novo->valor = num;
         novo->direita = NULL;
         novo->esquerda = NULL;
-        return novo;
+        return novo; //Retorna a raiz da árvore
     } else {
         // Se a árvore já estiver com dados
-        if (num < raiz->valor)
+        if (num < raiz->valor) //Se o novo nó for menor que a raiz, armazena na esquerda
             raiz->esquerda = inserir_valor(raiz->esquerda, num);
-        else
+        else //Se o novo nó for menor que a raiz, armazena na direita
             raiz->direita = inserir_valor(raiz->direita, num);
         return raiz;
     }
@@ -54,7 +54,7 @@ ArvBin buscar_valor(ArvBin raiz, int num) {
     }
 }
 
-// Função para encontrar o valor mínimo na árvore
+// Função para encontrar o valor mínimo na árvore, valor mais a esquerda possível
 ArvBin encontrarMinimo(ArvBin raiz) {
     ArvBin atual = raiz;
     while (atual->esquerda != NULL) {
