@@ -1,5 +1,5 @@
-**Aluna:** Cecília de Jesus Barros  
-**Turma:** CC6M
+##**Aluna:** Cecília de Jesus Barros  
+##**Turma:** CC6M
 
 ### Organização do Diretório no GitHub
 
