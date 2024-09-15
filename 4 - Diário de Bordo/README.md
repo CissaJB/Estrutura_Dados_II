@@ -8,3 +8,12 @@ Escreva funções que recebam um ponteiro para a raiz da árvore e realizem as s
 - **Pesquisa de um elemento na árvore**
 - **Exclusão de um elemento na árvore**
 
+# Exercício2 sobre Árvore AVL. 15/09
+
+Crie em C a estrutura de uma árvore binária cuja informação seja um inteiro.
+
+Escreva funções que recebam um ponteiro para a raiz da árvore AVL e façam:
+- **Função de balanceamento;**
+- **Inserção de um elemento na árvore;**
+- **Pesquisa de um elemento na árvore;**
+- **Exclusão de um elemento na árvore.**
