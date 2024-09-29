@@ -22,6 +22,6 @@ Escreva funções que recebam um ponteiro para a raiz da árvore AVL e façam:
 
 Crie em C a estrutura de uma árvore Red-Black cuja informação seja um inteiro.
 
-Escreva funções que recebam um ponteiro para a raiz da árvore AVL e façam:
+Escreva funções que recebam um ponteiro para a raiz da árvore Red-Black e façam:
 - **Inserção de um elemento na árvore;**
 - **Pesquisa de um elemento na árvore;**
