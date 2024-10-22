@@ -58,6 +58,49 @@ No* inserir(No* raiz, int num, int prioridade){
 
 }
 
+No* remover(No* raiz, int num) {
+    if (raiz == NULL) { //Arvore vazia
+        return NULL;
+    }
+
+    // Encontra o nó a ser removido
+    if (num < raiz->valor) { //Se o num for menor que a raiz procura na esquerda
+        raiz->esquerda = remover(raiz->esquerda, num);
+    } else if (num > raiz->valor) { //Se o num for menor que a raiz procura na direita
+        raiz->direita = remover(raiz->direita, num);
+    } else {
+        // Nó encontrado
+
+        // Caso 1: Nó folha (Sem filhos, só remover)
+        if (raiz->esquerda == NULL && raiz->direita == NULL) {
+            free(raiz);
+            return NULL;
+        }
+
+        // Caso 2: Nó com um filho (está a direita ou a esquerda, o filho vira raiz)
+        if (raiz->esquerda == NULL) {
+            No* temp = raiz->direita;
+            free(raiz);
+            return temp;
+        } else if (raiz->direita == NULL) {
+            No* temp = raiz->esquerda;
+            free(raiz);
+            return temp;
+        }
+
+        // Caso 3: Nó com dois filhos (Vira raiz quem tem a maior prioridade)
+        // Rotaciona para manter a prioridade, removendo o nó recursivamente
+        if (raiz->esquerda->prioridade > raiz->direita->prioridade) {
+            raiz = RSD(raiz);
+            raiz->direita = remover(raiz->direita, num);
+        } else {
+            raiz = RSE(raiz);
+            raiz->esquerda = remover(raiz->esquerda, num);
+        }
+    }
+    return raiz;
+}
+
 // Imprimindo a árvore
 void imprimir(No *raiz, int nivel) {
     int i;
@@ -92,6 +135,13 @@ int main() {
 
     // Imprimindo a Treap
     printf("Estrutura da Treap:\n");
+    printf("Exercicio feito em sala de aula");
+    imprimir(raiz,0);
+
+    //Testando Remoção
+    raiz = remover(raiz, 14);
+    printf("\n\n\n");
+    printf("Imprimindo depois de remover o 14, que tem 2 filhos, como 16 tem a maior prioridade vira raiz");
     imprimir(raiz,0);
 
 
