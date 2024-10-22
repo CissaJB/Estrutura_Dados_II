@@ -25,3 +25,12 @@ Crie em C a estrutura de uma árvore Red-Black cuja informação seja um inteiro
 Escreva funções que recebam um ponteiro para a raiz da árvore Red-Black e façam:
 - **Inserção de um elemento na árvore;**
 - **Pesquisa de um elemento na árvore;**
+
+# Exercício4 sobre Árvore Treap. 
+
+Crie em C a estrutura de uma árvore Treap cuja informação seja um inteiro.
+
+Escreva funções que recebam um ponteiro para a raiz da árvore Treap e façam:
+- **Inserção de um elemento na árvore;**
+- **Remoção de um elemento na Árvore**
+- **Pesquisa de um elemento na Árvore**
