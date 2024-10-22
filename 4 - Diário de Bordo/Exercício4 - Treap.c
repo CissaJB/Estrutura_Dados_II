@@ -117,6 +117,22 @@ void imprimir(No *raiz, int nivel) {
         imprimir(raiz->esquerda, nivel + 1);
     }
 }
+
+// Buscando um valor na árvore
+No* buscar_valor(No* raiz, int num) {
+    // Se a árvore estiver vazia ou o valor for encontrado de primeira (O(1))
+    if (raiz == NULL || raiz->valor == num) {
+        return raiz;
+    }
+    // Se o valor for menor que a raiz, procurar na esquerda
+    if (num < raiz->valor) {
+        return buscar_valor(raiz->esquerda, num);
+    // Se o valor for maior que a raiz, procurar na direita
+    } else {
+        return buscar_valor(raiz->direita, num);
+    }
+}
+
 int main() {
     No* raiz = NULL;
 
@@ -137,6 +153,17 @@ int main() {
     printf("Estrutura da Treap:\n");
     printf("Exercicio feito em sala de aula");
     imprimir(raiz,0);
+
+     // Teste de busca
+    int valor_buscado = 11;
+    No* resultado = buscar_valor(raiz, valor_buscado);
+
+    if (resultado != NULL) {
+        printf("\n\n Valor %d encontrado na arvore.\n", resultado->valor);
+    } else {
+        printf("\n\n Valor %d nao encontrado na arvore.\n", valor_buscado);
+    }
+
 
     //Testando Remoção
     raiz = remover(raiz, 14);
