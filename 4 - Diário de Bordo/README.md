@@ -34,3 +34,11 @@ Escreva funções que recebam um ponteiro para a raiz da árvore Treap e façam:
 - **Inserção de um elemento na árvore;**
 - **Remoção de um elemento na Árvore**
 - **Pesquisa de um elemento na Árvore**
+
+- # Exercício5 sobre Árvore B. 
+
+Crie em C a estrutura de uma árvore B cuja informação seja um inteiro.
+
+Escreva funções que recebam um ponteiro para a raiz da árvore B e façam:
+- **Inserção de um elemento na árvore;**
+
